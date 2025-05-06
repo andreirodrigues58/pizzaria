@@ -1,0 +1,469 @@
+:root {
+    --vermelho: #fb605e;
+    /* Botões e destaques */
+    --amarelo: #FBC02D;
+    /* Preços, chamada de ação */
+    --cinza-escuro: #212121;
+    /* Texto, footer */
+    --cinza-claro: #F5F5F5;
+    /* Fundo */
+    --branco: #FFFFFF;
+    /* Contraste e divisores */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s linear;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+section {
+    padding: 48px 32px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    background-color: var(--vermelho);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    border-bottom: 2px solid var(--amarelo);
+}
+
+.header section {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+.navbar a{
+    color: var(--branco);
+    margin: 0px 10px;
+    font-size: 16px;
+    cursor: pointer;
+   align-items: center;
+}
+
+.header .navbar a:hover{
+    color: var(--amarelo);
+    font-size: 18px;
+    border-bottom: 2px solid var(--amarelo);
+    padding-bottom: 5px;
+}
+
+.header .button {
+    color: var(--branco);
+    font-size: 25px;
+    cursor: pointer;
+   align-items: center;
+   background-color: var(--vermelho);
+}
+
+.header .button i:hover{
+    color: var(--branco);
+    font-size: 29px;
+    cursor: pointer;
+   align-items: center;
+   background-color: var(--vermelho);
+}
+
+.namento {
+    position: fixed;
+    top: 120px; /* Ajuste para ficar logo abaixo do header */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00b100; /* Exemplo de cor verde claro */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000; /* Garante que ficará à frente de outros elementos */
+    border-radius: 15px;
+    color: #F5F5F5;
+    white-space: nowrap;
+}
+
+.namento.closed {
+    background-color: red; /* Cor para quando estiver fechado */
+}
+
+
+.home-container .btn{
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border-radius: 16px;
+    padding: 6px 14px;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--amarelo);
+    color: var(--branco);
+    letter-spacing: 0.02rem;
+}
+
+
+.btn{
+    background-color: var(--amarelo);
+    color: var(--branco);
+    border-radius: 16px;
+    padding: 6px 14px;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.02rem;
+}
+
+.home-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/fundo\ pizzaria.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home-container .o{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.home-container .content{
+    max-width: 60rem;
+    text-align: left;
+    margin-top: 220px;
+    padding: 29px;
+    border-radius: 16px;
+}
+
+.home-container .content h3{
+    color: var(--branco);
+    font-size: 28px;
+    font-weight: bold;
+    white-space: wrap;
+}
+
+.title {
+    font-size: 40px;
+    color: var(--vermelho);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.menu .box-servico {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr); /* 2 colunas */
+    padding: 2rem; /* Adiciona algum espaçamento interno */
+    flex-wrap: wrap;
+}
+
+.menu .box-servico .servico {
+    text-align: center;
+    background-color: var(--vermelho);
+    padding: 2rem 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px; /* Largura máxima de cada serviço */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+.menu .box-servico .servico img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.menu .box-servico .servico h3 {
+    color: var(--cinza-escuro);
+    font-size: 22px;
+    white-space: nowrap;
+    padding: 1rem 0;
+}
+
+.menu .box-servico .servico p {
+    color: var(--cinza-escuro);
+    font-size: 0.8rem;
+    padding: 1rem 0;
+}
+
+.menu .box-servico .servico .price {
+    color: var(--cinza-escuro);
+    font-size: 20px;
+    padding: 0.5rem 0;
+}
+
+.menu .box-servico .servico .price span {
+    color: var(--amarelo);
+    font-size: 1rem;
+    text-decoration: line-through;
+    font-weight: 100;
+}
+
+.menu .box-servico .servico .btn {
+    font-size: 13px;
+    background-color: var(--amarelo);
+    color: var(--cinza-escuro);
+}
+
+.menu .box-servico .servico:hover {
+    background-color: var(--amarelo);
+}
+
+.menu .box-servico .servico:hover .btn {
+    background-color: var(--vermelho);
+}
+
+.menu .box-servico .servico:hover span {
+    color: var(--vermelho);
+}
+
+.menu .box-servico .servico:hover>* {
+    color: var(--black);
+}
+
+.footer{
+    background-color: var(--vermelho);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer section{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.icon i{
+ font-size: 26px;
+ color: var(--branco);
+ padding: 5px;
+}
+
+.icon i:hover{
+    font-size: 30px;
+    color: var(--amarelo);
+   }
+
+   .funcio h3{
+    text-align: center;
+    font-size: 16px;
+    color: var(--branco);
+   }
+
+   .funcio h3:hover{
+    font-size: 18px;
+    color: var(--amarelo);
+    border-bottom: 1px solid var(--amarelo);
+    padding-bottom: 1px;
+   }
+
+   .content h3{
+    font-size: 16px;
+    color: var(--branco);
+   }
+
+   .content h3:hover{
+    font-size: 18px;
+    color: var(--amarelo);
+    border-bottom: 1px solid var(--amarelo);
+    padding-bottom: 1px;
+   }
+
+   /* Estilo para o carrinho */
+   .carrinho {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.carrinho.ativo {
+    display: block;
+}
+  
+  .carrinho-content {
+    background-color: var(--amarelo);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .carrinho-content h2{
+    text-align: center;
+    margin-bottom: 3px;
+  }
+
+  .observacoes{
+margin-bottom: 3px;
+  }
+
+  .observacoes label{
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+      }
+  
+  .itens-carrinho {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  
+  .itens-carrinho .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .itens-carrinho .item span {
+    font-size: 16px;
+  }
+  
+  #observacao {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .acoes{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+  }
+
+  .voltar-btn{
+    font-size: 12px;
+  }
+  
+  .total {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .finalizar-pedido{
+         white-space: nowrap;
+         font-size: 12px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: var(--vermelho);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--vermelho);
+  }
+  
+  /* Estilos do botão de adicionar ao carrinho */
+  .add-to-cart {
+    cursor: pointer;
+  }
+
+
+
+  .frete input {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .frete p{
+    margin-top: 3px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .quantidade-preco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 5px;
+  }
+  
+  .quantidade-controle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .quantidade-controle button {
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .quantidade {
+    font-weight: bold;
+    font-size: 16px;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .preco-produto {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+  }
